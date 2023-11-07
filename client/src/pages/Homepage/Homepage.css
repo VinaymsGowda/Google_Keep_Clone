@@ -1,0 +1,24 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,170px);
+    justify-content: space-evenly;
+}
+
+.card{
+    color:12C5E3;
+    background-color: #12C5E3;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.card:hover{
+    box-shadow: 12px 3px 10px #12E39D;
+}

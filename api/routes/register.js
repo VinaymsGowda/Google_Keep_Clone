@@ -8,6 +8,9 @@ const registerroute=express.Router();
 registerroute.post('/',async(req,res)=>{
     const username=req.body.username;
     const password=req.body.password;
+    if(!username || !password){
+        return res.status(400).json({msg:"Enter all credentials "})
+    }
 
     try {
         const userdoc=await UserModel.create({

@@ -6,6 +6,7 @@ import registerroute from './routes/register.js';
 import loginroute from './routes/login.js';
 import noteapi from './routes/Noteapi.js';
 import logout from "./routes/logout.js";
+import cors from "cors"
 
 dotenv.config();
 const port=4000;
@@ -13,6 +14,7 @@ const app=express();
 app.use(cookieParser())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 app.use('/register',registerroute);
 app.use('/login',loginroute);
 app.use('/note',noteapi);

@@ -1,0 +1,21 @@
+.editcontainer{
+    position: relative;
+    margin: 30px 14%;
+    width: 60%;
+    padding: 45px;
+    background-color: #323232;
+    color: white;
+}
+
+.done{
+    position: absolute;
+    width: 50px;
+    border-radius: 12%;
+    right: 10%;
+    bottom: 1%;
+    background-color: #00EA04;
+}
+
+.done:hover{
+    box-shadow: 4px 2px 4px #6CF16E;
+}

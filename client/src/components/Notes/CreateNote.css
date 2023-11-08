@@ -1,0 +1,26 @@
+.note-form{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 31px;
+    background-color: aliceblue;
+}
+
+.title{
+    padding: 10px;
+    margin: 10px;
+}
+
+.content{
+    padding: 10px;
+    margin: 10px;
+}
+
+.Add{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    float: right;
+    background-color: #FCED1F;
+    font-family: cursive;
+}

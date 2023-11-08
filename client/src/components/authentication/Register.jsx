@@ -34,8 +34,6 @@ export function Register(){
     }
     return(
         <div>
-        <Navbar/>
-        <div>
         <form className="form" onSubmit={handlelogin}>
         <h1>Create an Account</h1>
             <div className="inputfield">
@@ -48,7 +46,6 @@ export function Register(){
                 <button type="submit">Submit</button>
             </div>
         </form>
-        </div>
         </div>
     )
 }

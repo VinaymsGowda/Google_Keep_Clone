@@ -21,11 +21,13 @@ export function Login(){
             method:'POST',
             headers:{'Content-Type':'application/json'},
         });
+        const data=await response.json();
         if(response.ok){ //login is success so set username now
             localStorage.setItem('username',username);
+            localStorage.setItem('id',data.id);
             alert("Successful Login");
             //now navigate to home
-            navigate("/");
+            navigate("/notes");
         }
         else{
             alert("Invalid Login Credentials");
@@ -33,7 +35,6 @@ export function Login(){
     }
     return(
         <div>
-        <Navbar/>
         <div>
         <form className="form" onSubmit={handlelogin}>
         <h1>Enter Valid Credentials and Login to Your Account </h1>

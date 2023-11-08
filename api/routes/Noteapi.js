@@ -9,13 +9,14 @@ const noteapi=express.Router();
 const secret=process.env.JWT_SECRET;
 
 noteapi.get("/getnote",async(req,res)=>{
-    const {token}=req.cookies;
-    jwt.verify(token,secret,{},async(err,info)=>{
-        if(err)
-            throw err;
-        const notes=await NoteModel.find({author:info.id});
+        const {id}=req.headers;
+        console.log(id);
+    try {
+        const notes=await NoteModel.find({author:id}).sort({createdAt:-1});
         res.json(notes);
-    })
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 noteapi.get("/getnote/:id",async(req,res)=>{
@@ -26,44 +27,40 @@ noteapi.get("/getnote/:id",async(req,res)=>{
 })
 
 noteapi.post("/addnote",async(req,res)=>{
-    const {title,content}=req.body;
-    const {token}=req.cookies;
-
-    jwt.verify(token,secret,{},async(err,info)=>{
-        if(err)
-            throw err;
-        const userid=info.id;
+    const {title,content,id}=req.body;
+    if(!title || !content){
+        return res.status(400).json("msg:Empthy note discarded");
+    }
+    console.log(title);
+    console.log(content);
+    console.log(id);
         const notedoc=await NoteModel.create({
-            title,content,
-            author:userid,
+            title,
+            content,
+            author:id,
         });
         res.json(notedoc);
-    })
 });
 
 noteapi.put("/updatenote/:id",async(req,res)=>{
+    console.log("Hit update");
     try {
-        const {title,content}=req.body;
+        const {title,content,userid}=req.body;
         const {id}=req.params;
-        const {token}=req.cookies;
-        jwt.verify(token,secret,{},async(err,info)=>{
-            if(err)
-                throw err;
-            const userid=info.id;
-            const updatenote=await NoteModel.updateOne({_id:id},{
-                title:title,
-                content:content,
-                author:userid,
-            });
-            res.json(updatenote);
-            console.log(updatenote);
+        const updatenote=await NoteModel.updateOne({_id:id},{
+            title:title,
+            content:content,
+            author:userid,
         });
+        res.json(updatenote);
+        console.log(updatenote);
     } catch (error) {
         res.status(404).json("Notes not found");
     }
 })
 
 noteapi.delete("/deletenote/:id",async(req,res)=>{
+    console.log("hit ");
     try {
         const {id}=req.params;
         const deletenote=await NoteModel.deleteOne({_id:id});

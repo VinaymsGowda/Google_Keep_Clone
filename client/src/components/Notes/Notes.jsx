@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './Notes.css'
+import './notes.css'
 import { CreateNote } from "./CreateNewNote";
 import { Note } from "./Note";
 
@@ -38,7 +38,7 @@ export function Notes(){
 return(
     <>
     <CreateNote/>
-    <div className="container-note">
+    <div className="notes">
         {
             notes.length>0 && (
                 notes.map(note=>(

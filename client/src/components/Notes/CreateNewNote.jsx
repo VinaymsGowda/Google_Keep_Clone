@@ -5,7 +5,7 @@ export function CreateNote() {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
     async function handlesubmit(event) {
-        event.preventDefault();
+        // event.preventDefault();
         const body = {
             title: title,
             content: content,
@@ -24,7 +24,7 @@ export function CreateNote() {
         else if (response.ok) {
             const data = await response.json();
             console.log(data);
-            window.location.reload();
+            // window.location.reload();
         }
         //send a post request from here to backend
     }
@@ -54,6 +54,6 @@ export function CreateNote() {
                 <input type="text" id="content-input" placeholder="Description" value={content} onChange={handlecontent}/>
                 <input type="submit" value="Add Note" id="btn-add-note" />
             </form>
-        </div >
+        </div>
     )
 }

@@ -6,6 +6,7 @@ import registerroute from './routes/register.js';
 import loginroute from './routes/login.js';
 import noteapi from './routes/Noteapi.js';
 import logout from "./routes/logout.js";
+import { ToDoApi } from "./routes/ToDoApi.js";
 import cors from "cors"
 
 dotenv.config();
@@ -19,6 +20,7 @@ app.use('/register',registerroute);
 app.use('/login',loginroute);
 app.use('/note',noteapi);
 app.use("/logout",logout);
+app.use('/todo',ToDoApi);
 
 app.get("/",async(req,res)=>{
     res.send("<h1>Hello</h1>");

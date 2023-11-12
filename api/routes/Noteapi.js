@@ -10,7 +10,7 @@ const secret=process.env.JWT_SECRET;
 
 noteapi.get("/getnote",async(req,res)=>{
         const {id}=req.headers;
-        console.log(id);
+        // console.log(id);
     try {
         const notes=await NoteModel.find({author:id}).sort({createdAt:-1});
         res.json(notes);

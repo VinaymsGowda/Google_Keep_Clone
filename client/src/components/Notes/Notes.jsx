@@ -31,7 +31,7 @@ export function Notes(){
             }
         }
         fetchNotes();
-    }, []); // The empty dependency array means it only runs once when the component is mounted
+    }, [notes]); // The empty dependency array means it only runs once when the component is mounted
 
     
     

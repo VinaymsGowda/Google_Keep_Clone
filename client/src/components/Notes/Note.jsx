@@ -17,6 +17,7 @@ export function Note(props) {
         const response = await fetch('http://localhost:4000/note/deletenote/' + props.id, {
             method: 'DELETE',
         });
+        props.fun();
     }
     return (
         <div className="note" onClick={handleEdit}>

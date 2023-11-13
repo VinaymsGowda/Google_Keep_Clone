@@ -7,6 +7,8 @@ import { Notes } from './components/Notes/Notes';
 import { Navbar } from './components/Navbar/Navbar';
 import { Edit } from './components/EditPage/Edit';
 import { Sidebar } from './components/Sidebar/Sidebar';
+import { ToDos } from './components/ToDo/ToDos';
+import NewToDo from './components/ToDo/NewToDo';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path='/register' element={<Register />}></Route>
           <Route path='/notes' element={<Notes />}></Route>
           <Route path='/edit/:id' element={<Edit />}></Route>
+          <Route path='/todo' element={<ToDos/>}></Route>
+          <Route path='/NewToDo' element={<NewToDo/>}></Route>
         </Routes>
       </main>
     </BrowserRouter>

@@ -1,0 +1,48 @@
+.wrappertodo{
+    margin-top: 5%;
+}
+.but{
+    background-color: #E3A156;
+    border: 3px solid #E3A156;
+}
+
+.wrappertodo form input[type="text"]{
+    background-color: none;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px 4px;
+    width:70% ;
+}
+
+
+.wrappertodo form{
+    display: flex;
+    justify-content: center;
+    align-items: cent er;
+}
+
+.task{
+    width: 250px;
+    position: relative;
+    display: flex;
+    padding: 17px;
+    background-color: #E3A156;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div.task.done{
+    text-decoration: line-through;
+}
+.task svg{
+    margin-right: 14px;
+}
+
+.trash{
+    position: absolute;
+    right: 15%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

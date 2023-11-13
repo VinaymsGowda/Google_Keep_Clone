@@ -36,14 +36,14 @@ export function Register(){
         <div>
         <form className="form" onSubmit={handlelogin}>
         <h1>Create an Account</h1>
-            <div className="inputfield">
-                <input type="text" placeholder="username" onChange={handleusername} value={username}/>
+            <div>
+                <input className="inputfield" type="text" placeholder="username" onChange={handleusername} value={username}/>
             </div>
-            <div className="inputfield">
-                <input type="password" placeholder="password" value={password} onChange={handlepassword}/>
+            <div>
+                <input className="inputfield" type="password" placeholder="password" value={password} onChange={handlepassword}/>
             </div>
             <div className="submit">
-                <button type="submit">Submit</button>
+                <button type="submit" className="login">Submit</button>
             </div>
         </form>
         </div>

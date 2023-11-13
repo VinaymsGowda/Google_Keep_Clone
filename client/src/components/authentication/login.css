@@ -8,12 +8,12 @@
     background-color: whitesmoke
 }
 
-input{
+.inputfield{
     width: 300px;
     height: 25px;
 }
 
-button{
+.login{
     width: 300px;
     height: 25px;
     cursor: pointer;

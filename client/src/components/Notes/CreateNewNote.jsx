@@ -11,7 +11,7 @@ export function CreateNote(props) {
             content: content,
             id: localStorage.getItem('id'),
         }
-        const response = await fetch('http://localhost:4000/note/addnote', {
+        const response = await fetch('https://google-keep-clone-1xas.onrender.com/note/addnote', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

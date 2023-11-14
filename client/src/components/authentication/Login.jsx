@@ -16,7 +16,7 @@ export function Login(){
     async function handlelogin(event){
         event.preventDefault();
 
-        const response=await fetch('http://localhost:4000/login',{
+        const response=await fetch('https://google-keep-clone-1xas.onrender.com/login',{
             body:JSON.stringify({username,password}),
             method:'POST',
             headers:{'Content-Type':'application/json'},

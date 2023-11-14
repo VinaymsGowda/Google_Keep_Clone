@@ -14,7 +14,7 @@ export function Note(props) {
     async function handleDelete(event) {
         event.stopPropagation();
         console.log("hi");
-        const response = await fetch('http://localhost:4000/note/deletenote/' + props.id, {
+        const response = await fetch('https://google-keep-clone-1xas.onrender.com/note/deletenote/' + props.id, {
             method: 'DELETE',
         });
         props.fun();

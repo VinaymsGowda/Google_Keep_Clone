@@ -8,7 +8,7 @@ export function Navbar() {
     const navigate = useNavigate();
     const username = localStorage.getItem('username');
     async function handlelogout() {
-        const response = await fetch('http://localhost:4000/logout', {
+        const response = await fetch('https://google-keep-clone-1xas.onrender.com/logout', {
             method: 'GET',
         });
         console.log(response);

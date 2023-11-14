@@ -16,7 +16,7 @@ export function Register(){
     async function handlelogin(event){
         event.preventDefault();
 
-        const response=await fetch('http://localhost:4000/register',{
+        const response=await fetch('https://google-keep-clone-1xas.onrender.com/register',{
             body:JSON.stringify({username,password}),
             method:'POST',
             headers:{'Content-Type':'application/json'},

@@ -13,7 +13,7 @@ export function Notes(){
 
     async function fetchNotes() {
         try {
-            const response = await fetch('http://localhost:4000/note/getnote',{
+            const response = await fetch('https://google-keep-clone-1xas.onrender.com/note/getnote',{
                 method:'GET',
                headers:{
                 id:localStorage.getItem('id')

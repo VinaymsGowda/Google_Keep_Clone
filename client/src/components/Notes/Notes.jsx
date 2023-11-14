@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './notes.css'
 import { CreateNote } from "./CreateNewNote";
 import { Note } from "./Note";
+import { Sidebar } from "../Sidebar/Sidebar";
 
 export function Notes(){
     const [notes, setNotes] = useState([]);
@@ -30,6 +31,7 @@ export function Notes(){
     
 return(
     <>
+    <Sidebar/>
     <CreateNote funct={fetchNotes}/>
     <div className="notes">
         {

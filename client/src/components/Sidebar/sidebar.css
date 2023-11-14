@@ -52,3 +52,22 @@
     border-radius: 20px;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    #sidebar-hamburger {
+        display: block;
+    }
+
+    #sidebar-close {
+        display: none;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    #sidebar-checkbox:checked~.sidebar {
+        left: 0;
+        width: 100%;
+    }
+}

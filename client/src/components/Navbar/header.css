@@ -46,3 +46,18 @@ header a{
 header a:hover {
     background-color: #fbe5a5;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header .brand {
+        margin-bottom: 1rem;
+    }
+
+    header p {
+        margin: 1rem 0;
+    }
+}

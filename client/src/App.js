@@ -12,12 +12,13 @@ import NewToDo from './components/ToDo/NewToDo';
 
 
 function App() {
+  const id=localStorage.getItem('id');
   return (
     <BrowserRouter>
       <Navbar />
       <hr/>
       <main>
-        <Sidebar/>
+        {/* <Sidebar/> */}
         <Routes>
           <Route exact path='/' element={<Home />}></Route>
           <Route path='/login' element={<Login />}></Route>

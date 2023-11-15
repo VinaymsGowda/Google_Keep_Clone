@@ -8,7 +8,7 @@ const NewToDo = () => {
     const [tasks,setTasks]=useState([]);
     useEffect(()=>{
         getTasks();
-    },[]);
+    });
 
     async function getTasks(){
         const response=await fetch('https://google-keep-clone-1xas.onrender.com/todo/getTasks/'+id);

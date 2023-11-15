@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Navbar } from "../Navbar/Navbar";
 import './login.css';
-import { json, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export function Register(){
     const navigate=useNavigate();
     const [username,setusername]=useState("");

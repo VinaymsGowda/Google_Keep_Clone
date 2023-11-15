@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import './notes.css';
 import deleteIcon from '../../images/delete.svg';
+import './notes.css';
 
 export function Note(props) {
 

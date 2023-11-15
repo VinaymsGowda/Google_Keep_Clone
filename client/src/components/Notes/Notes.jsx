@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../Notes/notes.css";
-
 import { CreateNote } from "./CreateNewNote";
 import { Note } from "./Note";
 import { Sidebar } from "../Sidebar/Sidebar";
+import "../Notes/notes.css";
 
 export function Notes(){
     const [notes, setNotes] = useState([]);

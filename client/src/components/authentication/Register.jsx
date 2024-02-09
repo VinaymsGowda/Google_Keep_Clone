@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './login.css';
 import { useNavigate } from "react-router-dom";
+import PasswordStrength from "./PasswordStrength";
 export function Register(){
     const navigate=useNavigate();
     const [username,setusername]=useState("");
     const [password,setpassword]=useState("");
 
+    
+
     function handleusername(event){
         setusername(event.target.value);
     }
-    function handlepassword(event){
-        setpassword(event.target.value);
-    }
+
     async function handlelogin(event){
         event.preventDefault();
 
-        const response=await fetch('https://google-keep-clone-1xas.onrender.com/register',{
+        const response=await fetch('http://localhost:4000/register',{
             body:JSON.stringify({username,password}),
             method:'POST',
             headers:{'Content-Type':'application/json'},
@@ -32,15 +33,13 @@ export function Register(){
         }
     }
     return(
-        <div>
+        <div className="signupCompo">
         <form className="form" onSubmit={handlelogin}>
         <h1>Create an Account</h1>
             <div>
                 <input className="inputfield" type="text" placeholder="username" onChange={handleusername} value={username}/>
             </div>
-            <div>
-                <input className="inputfield" type="password" placeholder="password" value={password} onChange={handlepassword}/>
-            </div>
+            <PasswordStrength password={password} setpassword={setpassword}/>
             <div className="submit">
                 <button type="submit" className="login">Submit</button>
             </div>

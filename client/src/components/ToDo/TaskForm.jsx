@@ -7,9 +7,12 @@ export const TaskForm = (props) => {
     
 
     function handleSubmission(event){
+      if(taskname.length===0){
+        alert("tasks cannot be empthy")
+        return;
+      }
         event.preventDefault();
         props.onAdd(taskname);
-        
         setTaskName('')
     
     }

@@ -9,15 +9,23 @@ import { Edit } from './components/EditPage/Edit';
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { ToDos } from './components/ToDo/ToDos';
 import NewToDo from './components/ToDo/NewToDo';
+import ThemeProvider, { ThemeState } from './components/ThemeProvider';
+
+
 
 
 function App() {
   const id=localStorage.getItem('id');
+  const {theme}=ThemeState();
+  
   return (
+    
     <BrowserRouter>
+    
       <Navbar />
       <hr/>
-      <main>
+      
+      <main id={theme}>
         {/* <Sidebar/> */}
         <Routes>
           <Route exact path='/' element={<Home />}></Route>
@@ -29,7 +37,9 @@ function App() {
           <Route path='/NewToDo' element={<NewToDo/>}></Route>
         </Routes>
       </main>
+      
     </BrowserRouter>
+    
   );
 }
 

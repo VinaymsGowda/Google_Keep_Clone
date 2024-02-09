@@ -17,7 +17,7 @@ export function Edit() {
             "content": content,
             "userid": localStorage.getItem('id'),
         }
-        const response = await fetch('https://google-keep-clone-1xas.onrender.com/note/updatenote/' + id, {
+        const response = await fetch('http://localhost:4000/note/updatenote/' + id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export function Edit() {
     useEffect(() => {
         async function fetchnote() {
             //get title and content from backend using id
-            const response = await fetch('https://google-keep-clone-1xas.onrender.com/note/getnote/' + id);
+            const response = await fetch('http://localhost:4000/note/getnote/' + id);
             const data = await response.json();
             console.log(data);
             setTitle(data.title);

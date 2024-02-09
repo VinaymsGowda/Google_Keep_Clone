@@ -1,6 +1,7 @@
 .add-note {
     display: flex;
     flex-direction: column;
+    
     border: 1px solid rgb(174, 174, 174);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(79, 79, 79, 0.3);
@@ -11,7 +12,7 @@
 
 .add-note input {
     border: none;
-    background-color: #fff;
+    background-color: #A1A1A1;
     padding: 0.5rem;
 }
 
@@ -21,7 +22,7 @@
 
 label{
     cursor: pointer;
-    color: black;
+    /* color: black; */
 }
 
 .add-note #btn-add-note {

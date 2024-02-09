@@ -18,10 +18,12 @@
 }
 
 #sidebar-checkbox:checked~#sidebar-close {
+    
     display: block;
 }
 
 .sidebar {
+    
     display: none;
 }
 
@@ -29,7 +31,7 @@
     display: block;
     height: 87vh;
     width: 20%;
-    background-color:#feefc3;
+    background-color:#A1A1A1;
     position: fixed;
     left: 0;
     z-index: 1;
@@ -48,7 +50,8 @@
 }
 
 .sidebar ul li:hover{
-    background-color: white;
+    background-color: #ADF3FF;
+    color:black;
     border-radius: 20px;
     cursor: pointer;
 }

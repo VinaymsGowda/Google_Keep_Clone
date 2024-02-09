@@ -3,6 +3,7 @@ import { CreateNote } from "./CreateNewNote";
 import { Note } from "./Note";
 import { Sidebar } from "../Sidebar/Sidebar";
 import "./notes.css";
+import { ThemeState } from "../ThemeProvider";
 
 export function Notes(){
     const [notes, setNotes] = useState([]);
@@ -13,7 +14,7 @@ export function Notes(){
 
     async function fetchNotes() {
         try {
-            const response = await fetch('https://google-keep-clone-1xas.onrender.com/note/getnote',{
+            const response = await fetch('http://localhost:4000/note/getnote',{
                 method:'GET',
                headers:{
                 id:localStorage.getItem('id')
@@ -28,7 +29,7 @@ export function Notes(){
     }
 
     
-    
+    const {theme}=ThemeState();
 return(
     <>
     <Sidebar/>

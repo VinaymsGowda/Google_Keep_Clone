@@ -2,9 +2,14 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import './sidebar.css';
 import hamburger from "../../images/hamburger.svg";
+import white from "../../images/white.svg"
 import close from "../../images/close.svg";
+import { ThemeState } from "../ThemeProvider";
 
 export function Sidebar(props) {
+    const {theme}=ThemeState();
+
+    
 
     const navigate=useNavigate();
     function handleNote(){
@@ -20,7 +25,7 @@ export function Sidebar(props) {
     return (
         <>
             <input type="checkbox" id="sidebar-checkbox" />
-            <label for="sidebar-checkbox" id="sidebar-hamburger"><img src={hamburger} alt="hamburger"/></label>
+            <label for="sidebar-checkbox" id="sidebar-hamburger"><img src={theme==='dark'?white:hamburger} alt="hamburger"/></label>
             <label for="sidebar-checkbox" id="sidebar-close"><img src={close} alt="hamburger"/></label>
             <div class="sidebar">
                 <ul>

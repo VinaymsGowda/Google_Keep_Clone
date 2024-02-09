@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './addNote.css'
+import { ThemeState } from "../ThemeProvider";
 
 export function CreateNote(props) {
     const [title, setTitle] = useState("");
@@ -11,7 +12,7 @@ export function CreateNote(props) {
             content: content,
             id: localStorage.getItem('id'),
         }
-        const response = await fetch('https://google-keep-clone-1xas.onrender.com/note/addnote', {
+        const response = await fetch('http://localhost:4000/note/addnote', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,10 +38,11 @@ export function CreateNote(props) {
     function handlecontent(event) {
         setContent(event.target.value);
     }
+    const {theme}=ThemeState();
     return (
         
         <div className="add-note">
-            <form onSubmit={handlesubmit}>
+            <form onSubmit={handlesubmit} id={theme}>
                 <input type="checkbox" id="note-expand-checkbox" />
                 <label htmlFor="note-expand-checkbox"></label>
                 <input type="text" id="title-input" placeholder="Title" value={title} onChange={handletitle}/>

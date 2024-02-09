@@ -1,9 +1,15 @@
 .wrappertodo{
     margin-top: 5%;
+    
+}
+
+.newtodoContainer{
+    height: 96%;
 }
 .but{
     background-color: #E3A156;
     border: 3px solid #E3A156;
+    margin-right:21px;
 }
 
 .wrappertodo form input[type="text"]{
@@ -30,6 +36,12 @@
     margin-top: 10px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.listoftasks{
+    display: grid;
+    gap: 2.1rem;
+    grid-template-columns: repeat(3,1fr)
 }
 
 div.task.done{

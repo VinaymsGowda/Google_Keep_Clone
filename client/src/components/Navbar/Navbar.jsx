@@ -5,7 +5,6 @@ import './header.css';
 import logo from '../../images/logo.png';
 import DarkMode from "./DarkMode";
 import { ThemeState } from "../ThemeProvider";
-
 export function Navbar() {
     const navigate = useNavigate();
     const username = localStorage.getItem('username');

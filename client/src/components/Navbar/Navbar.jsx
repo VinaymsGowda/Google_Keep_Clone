@@ -38,7 +38,7 @@ export function Navbar() {
                     <img src={logo} alt="logo"/>
                         <p>Keep - Clone</p>
                     </Link>
-                    <DarkMode/>
+                    {/* <DarkMode/> */}
                 </div><p id={theme}>Hello, {username}</p><Link onClick={handlelogout}>Logout</Link></>
             )}
             
@@ -48,7 +48,7 @@ export function Navbar() {
                 <img src={logo} alt="logo"/>
                     <p>Keep - Clone</p>
                     </Link>
-                    <DarkMode/>
+                    {/* <DarkMode/> */}
             </div>
             )}
 

@@ -38,7 +38,7 @@ export function Navbar() {
                         <p>Keep - Clone</p>
                     </Link>
                     {/* <DarkMode/> */}
-                </div><p id={theme}>Hello, {username}</p><Link onClick={handlelogout}>Logout</Link></>
+                </div><p id={theme}>Hello hi, {username}</p><Link onClick={handlelogout}>Logout</Link></>
             )}
             
             {!username && (

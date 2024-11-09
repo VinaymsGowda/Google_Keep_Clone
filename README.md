@@ -1,6 +1,4 @@
-Certainly! Here's a refined version of your README file:
 
----
 
 # Google Keep Clone Project
 

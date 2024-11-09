@@ -11,7 +11,7 @@ const NewToDo = () => {
     });
 
     async function getTasks(){
-        const response=await fetch('http://localhost:4000/todo/getTasks/'+id);
+        const response=await fetch('https://google-keep-clone-1xas.onrender.com/todo/getTasks/'+id);
         const data=await response.json();
         setTasks(data);
     }
@@ -28,7 +28,7 @@ const NewToDo = () => {
             "author":id,
         }
 
-        const response=await fetch('http://localhost:4000/todo/newtodo',{
+        const response=await fetch('https://google-keep-clone-1xas.onrender.com/todo/newtodo',{
           'method':'POST',
           headers:{
             'Content-Type':'application/json'

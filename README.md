@@ -52,4 +52,4 @@ You can now access the client side of the MERN application by navigating to [htt
 
 To stop the application, simply press `Ctrl+C` on the terminal running the containers.
 
----
+--

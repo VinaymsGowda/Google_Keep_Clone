@@ -11,7 +11,7 @@ export function Task(props){
         console.log((props.id));
         console.log(checked);
 
-        const response=await fetch('http://localhost:4000/todo/changecheck/'+props.id,{
+        const response=await fetch('https://google-keep-clone-1xas.onrender.com/todo/changecheck/'+props.id,{
             method:'PUT',
             headers:{
                 'Content-Type':'application/json',
@@ -30,7 +30,7 @@ export function Task(props){
     async function handleDelete(event){
         event.stopPropagation();
         console.log("Deleted id");
-        const response=await fetch('http://localhost:4000/todo/deleteToDo/'+props.id,{
+        const response=await fetch('https://google-keep-clone-1xas.onrender.com/todo/deleteToDo/'+props.id,{
             method:'DELETE',
         });
         if(response.ok){

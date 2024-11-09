@@ -8,6 +8,7 @@ import noteapi from './routes/Noteapi.js';
 import logout from "./routes/logout.js";
 import { ToDoApi } from "./routes/ToDoApi.js";
 import cors from "cors"
+import log from "log-to-file";
 
 dotenv.config();
 const port=4000;
@@ -30,6 +31,7 @@ app.listen(port,()=>{
     mongoose.connect(process.env.mongo_URL)
     .then(()=>{
         console.log("Mongo Db Database connected");
+        log("Mongo Db Database connected");
         console.log("Server Running on Port "+port);
     })
     .catch(()=>{

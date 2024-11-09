@@ -1,15 +1,18 @@
 .wrappertodo{
     margin-top: 5%;
-    
 }
 
 .newtodoContainer{
-    height: 96%;
+    /* height: 96%; */
+    width: 100%;
 }
 .but{
-    background-color: #E3A156;
-    border: 3px solid #E3A156;
+    /* background-color: #E3A156;
+    border: 3px solid #E3A156; */
     margin-right:21px;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
 }
 
 .wrappertodo form input[type="text"]{
@@ -17,33 +20,40 @@
     border: 0;
     border-radius: 10px;
     padding: 5px 4px;
-    width:70% ;
+    /* width:70% ; */
 }
 
 
-.wrappertodo form{
+/* .wrappertodo form{
     display: flex;
     justify-content: center;
-    align-items: cent er;
-}
+    align-items: center;
+} */
 
 .task{
-    width: 250px;
+    /* width: 20rem; */
     position: relative;
     display: flex;
     padding: 17px;
-    background-color: #E3A156;
+    /* background-color: #E3A156; */
     margin-top: 10px;
     border-radius: 10px;
     cursor: pointer;
+    width: auto; /* Allow tasks to take up available space */
+    min-width: 10rem; /* Ensure the minimum width matches your grid setting */
+    max-width: 100%; 
 }
+/* 
+.task:hover{
+    box-shadow: 1rem 1rem whitesmoke;
+} */
 
-.listoftasks{
+.listoftasks {
     display: grid;
-    gap: 2.1rem;
-    grid-template-columns: repeat(3,1fr)
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1rem; /* Adjust the gap between items as needed */
+    /* You can add any additional styling here */
 }
-
 div.task.done{
     text-decoration: line-through;
 }

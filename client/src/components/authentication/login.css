@@ -1,43 +1,86 @@
-.form{
-    /* height: 10rem; */
-    display: flex;
-    gap: 21px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #C3F6C3;
-    padding: 5rem 3rem;
-    font-size: 1.3rem;
+/* Reset the body background to avoid any unwanted gray background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white; /* Set to white */
+  font-family: Arial, sans-serif;
 }
 
-.inputfield{
-    width: 300px;
-    height: 25px;
-    margin: 0px 24px;
+/* Overall container styling */
+.s {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc; /* This background color is fine */
 }
 
-.login{
-    width: 10em;
-    height: 25px;
-    cursor: pointer;
-    margin-bottom: 16px;
-    background-color: #64D9B2;
-    border-radius: 3%;
-    color: white;
-    font-weight: bold;
-    padding: 4px;
+/* Form styling */
+.form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
-.login:hover{
-    color: black;
+/* Heading */
+.form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-div .submit{
-    margin-top: 1.2em;
+/* Input field styling */
+.inputfield {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
+/* Focus effect on input fields */
+.inputfield:focus {
+  border-color: #4caf50;
+  outline: none;
+}
 
-.Logincomponent,.signupCompo{
-    margin-top: 1.9em;
-    color: black;
+/* Submit button styling */
+.submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.login:hover {
+  background-color: #45a049;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 600px) {
+  .form {
+    padding: 20px;
+  }
+
+  .login {
+    font-size: 1rem;
+  }
 }

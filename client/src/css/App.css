@@ -7,16 +7,16 @@ body {
   /* color: var(--text-color); */
 }
 
-#light{
+#light {
   background-color: white;
   color: black;
 }
-#dark{
-  background-color: #131A1C;
+#dark {
+  background-color: #131a1c;
   color: white;
 }
 
-main{
+main {
   height: 96%;
 }
 

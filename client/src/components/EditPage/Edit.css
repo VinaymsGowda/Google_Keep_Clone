@@ -1,50 +1,90 @@
+/* Overall container styling */
 .edit-container {
-    width: 50%;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.edit-container input,textarea{
-    border: 1px solid rgb(101, 101, 101);
-    border-radius: 5px;
-}
-.edit-container input:focus,textarea:focus{
-    box-shadow: 0 0 10px rgba(58, 58, 58, 0.3);
-}
-
-.edit-container h1{
-    font-size: 2rem;
-    color: rgb(70, 70, 70);
-    text-align: center;
-    padding: 2rem;
+/* Title styling */
+.edit-container h1 {
+  font-size: 2rem;
+  color: rgb(70, 70, 70);
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.edit-container form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Form styling */
+.edit-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.edit-title {
-    width: 80%;
-    margin: 1rem;
+/* Input field and textarea styling */
+.edit-container input,
+.edit-container textarea {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.edit-content {
-    width: 80%;
-    height: 10rem;
-    margin: 1rem;
+/* Adjusted height for textarea to show 10 lines */
+.edit-container textarea {
+  height: 200px; /* 10 lines height */
 }
 
+/* Focus effect on input and textarea */
+.edit-container input:focus,
+.edit-container textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 10px rgba(58, 58, 58, 0.3);
+  outline: none;
+}
+
+/* Done button styling */
 .edit-done {
-    background-color: #feefc3;
-    text-decoration: none;
-    color: rgb(70, 70, 70);
-    border-radius: 20px;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bolder;
-    margin: 1rem;
+  background-color: #feefc3;
+  text-decoration: none;
+  color: rgb(70, 70, 70);
+  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+/* Hover effect for the Done button */
 .edit-done:hover {
-    background-color: #fbe5a5;
+  background-color: #fbe5a5;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .edit-container {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .edit-title,
+  .edit-content {
+    width: 100%;
+  }
+
+  .edit-done {
+    width: 100%;
+    font-size: 1rem;
+  }
 }

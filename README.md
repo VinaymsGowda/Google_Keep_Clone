@@ -6,7 +6,7 @@ Welcome to the Google Keep Clone Project! This project aims to replicate the fun
 
 ### Demo
 
-You can view a live demo of the project [here](https://google-keep-clone-mern.netlify.app).
+You can view a live demo of the project [here](https://google-keep-clone-client.vercel.app/).
 
 ### Getting Started
 
